@@ -11,11 +11,9 @@ module.exports = {
     const rssRes = await axios.get(options.rssUrl);
     const xmlParser = new xml2js.Parser();
     const rssJson = await xmlParser.parseStringPromise(rssRes.data);
-    const creator = rssJson.rss.channel[0].item.hasOwnProperty('dc:creator') ? 'dc:creator' : 'itunes:author'
-
     rssJson.rss.channel[0].item.forEach(item => {
       const nodeData = {
-        creator: item[creator][0],
+        creator: item['dc:creator'][0],
         pubDate: item.pubDate[0],
         num: item['itunes:episode'] ? parseInt(item['itunes:episode'][0]) : 0,
         title: item.title[0],
