@@ -10,9 +10,9 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@sofa-boys/gatsby-theme-podcast": "*",
-    "gatsby": "^2.21.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@rodriguesmyron/gatsby-theme-podcast": "*",
+    "gatsby": "^3.4.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
