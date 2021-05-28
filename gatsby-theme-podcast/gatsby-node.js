@@ -55,7 +55,7 @@ module.exports = {
         ? options.episodeSlug
         : 'episodes';
       actions.createPage({
-        path: `${episodeSlug}/${node.num ? node.num : 0}`,
+        path: `${episodeSlug}/${node.id}`,
         component: require.resolve(`./src/templates/episode.js`),
         context: {
           id: node.id,

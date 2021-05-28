@@ -90,7 +90,7 @@ function Navigation() {
                   <Link
                     role="menuitem"
                     activeClassName="active"
-                    to={`/episodes/${episode.num}`}
+                    to={`/episodes/${episode.id}`}
                   >
                     <h4>{episode.title}</h4>
                     {/* <div */}

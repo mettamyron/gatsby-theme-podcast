@@ -19,18 +19,13 @@ const Header = props => {
         <Box
           sx={{
             variant: 'header',
-            backgroundImage: image
+            backgroundImage: '{image}'
               ? 'none'
               : `linear-gradient(224deg, ${theme.colors.primaryLighten50} 0%, ${theme.colors.primaryDarken} 100%)`,
           }}
         >
-          {image && (
-            <Img
-              alt={episode.title}
-              fluid={image.childImageSharp.fluid}
-              sx={{ height: config.headerImageHeight }}
-            />
-          )}
+          <img src={image} alt={episode.title} />
+
           <Box className="header_content">
             <Flex
               sx={{

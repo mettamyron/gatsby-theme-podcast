@@ -39,7 +39,7 @@ const EpisodeTemplate = ({ data }) => {
         }}
       >
         <div sx={{ maxWidth: ['100%', 710] }}>
-          <Header episode={episode} />
+          <Header episode={episode} image={episode.coverImgUrl} />
           <article>
             <div
               dangerouslySetInnerHTML={{
