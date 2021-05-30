@@ -1,17 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `沙發男孩/Sofa Boys`,
-    description: `嘿！在我們的沙發上找個位子吧，泡杯咖啡，聽聽故事。兩位曾經以沙發為家的男孩，分享年少輕狂的創業經驗，或是毫不起眼的人生煩惱。坐穩囉，我們即將帶你來一趟專屬的沙發衝浪！`,
-    author: `@sofa-boys`,
+    title: 'The loving+kindness podcast',
+    description: 'The Maitri podcast',
+    author: '@rodriguesmyron',
   },
   plugins: [
     {
       resolve: '@rodriguesmyron/gatsby-theme-podcast',
       options: {
         rssUrl: 'https://api.substack.com/feed/podcast/12150.rss',
-        disqusShortName: 'sofa-boys',
-        spotifyUrl: 'https://open.spotify.com/show/1tqXpnVZoVSlsXdxvwDa6C',
-        googlePodcastsUrl: 'https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8xZTczZDVmYy9wb2RjYXN0L3Jzcw==',
+        disqusShortName: '',
+        spotifyUrl: 'https://open.spotify.com/show/3eVt1HT08IzIm60b9QwqTg',
+        googlePodcastsUrl: '',
+        applePodcastsUrl: 'https://podcasts.apple.com/us/podcast/closing-the-circle/id1569773276',
+
       },
     },
   ],

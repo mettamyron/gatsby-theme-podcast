@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import { jsx, Container } from 'theme-ui';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 
 import formatTime from '../lib/formatTime';
 
@@ -221,10 +221,10 @@ export default class Player extends React.Component {
             <button
               tabIndex="0"
               sx={{
-                backgroundImage:
-                  'linear-gradient(224deg, #B298FF 0%, #7A5EFF 100%)',
-                color: 'text',
-                border: 'none',
+                color: 'primary',
+                border: '1px solid',
+                borderColor: 'primary',
+                backgroundColor: 'background',
                 width: '100%',
                 maxWidth: 40,
                 height: 40,
@@ -261,8 +261,6 @@ export default class Player extends React.Component {
                   zIndex: 999,
                   width: 40,
                   height: 60,
-                  backgroundImage:
-                    'linear-gradient(270deg, #262A42 20%, rgba(26,34,50,0) 100%)',
                 },
                 h3: {
                   overflow: 'hidden',

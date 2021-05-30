@@ -25,5 +25,6 @@ module.exports = {
     ],
     'react/prop-types': ['off'],
     'prettier/prettier': 'error',
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
   },
 };

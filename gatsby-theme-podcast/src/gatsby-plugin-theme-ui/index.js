@@ -1,4 +1,5 @@
 import config from '../lib/config';
+import colors from '../colors';
 
 export default {
   useCustomProperties: true,
@@ -6,22 +7,11 @@ export default {
   space: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   sizes: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 40, 48, 64],
-  colors: {
-    text: 'rgba(255, 255, 255, 0.9)',
-    background: '#262A42',
-    backgroundLighten10: '#2F334C',
-    backgroundLighten20: '#3C3F55',
-    primaryDarken: '#4A50FF',
-    primary: '#6F74FF',
-    primaryLighten10: '#7D87FF',
-    primaryLighten50: '#9FAFFF',
-    primaryLighten70: '#C5C9FF',
-    secondary: '#85FFD0',
-  },
+  colors: colors,
   radii: [5, '50%'],
   fontWeights: {
-    body: 300,
-    heading: 500,
+    body: 400,
+    heading: 900,
   },
   lineHeights: {
     body: 1.675,
@@ -31,7 +21,7 @@ export default {
     heading: '1.5',
   },
   fonts: {
-    body: 'system-ui, sans-serif',
+    body: 'Rubik, system-ui, sans-serif',
     heading: 'inherit',
   },
   nav: {
@@ -55,7 +45,7 @@ export default {
     flexDirection: 'column',
     width: '100%',
     height: config.headerImageHeight,
-    color: 'text',
+    color: 'primary',
     h1: { fontSize: [6, 8], textShadow: '0 2px 5px rgba(0,0,0,0.2)' },
     'h1, h5': { m: 0 },
     h5: { mt: 1, fontSize: 1, opacity: 0.6 },
@@ -75,8 +65,8 @@ export default {
         height: 7,
         background: 'transparent',
         border: '1px solid',
-        borderColor: 'text',
-        color: 'text',
+        borderColor: 'primary',
+        color: 'primary',
         fontSize: '10px',
         borderRadius: 1,
         display: 'flex',

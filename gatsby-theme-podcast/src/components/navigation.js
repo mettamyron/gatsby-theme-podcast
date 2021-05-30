@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { useStaticQuery, graphql } from 'gatsby';
+import Img from "gatsby-image";
 import React from 'react';
 import { jsx, Flex } from 'theme-ui';
 import { FaPlay, FaPause } from 'react-icons/fa';
@@ -27,10 +28,17 @@ function Navigation() {
           num
         }
       }
+      brandingLogo: file(relativePath: { eq: "logo.png" }) {
+        childImageSharp {
+          fluid(maxHeight: 300) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `);
 
-  const Logo = () => (
+  const Title = () => (
     <Link to="/">
       <h1 sx={{ fontSize: 6, color: 'primary', mb: 0 }}>
         {data.site.siteMetadata.title}
@@ -38,9 +46,10 @@ function Navigation() {
     </Link>
   );
 
+
   return (
     <ContextConsumer>
-      {context => (
+      {(context) => (
         <>
           <Flex
             sx={{
@@ -52,7 +61,6 @@ function Navigation() {
                 variant: 'nav.logo',
               }}
             >
-              <Logo />
             </Flex>
             <button
               sx={{
@@ -62,9 +70,10 @@ function Navigation() {
                 p: 3,
                 backgroundColor: 'background',
                 color: 'text',
-                borderColor: 'backgroundLighten20',
+                borderColor: 'text',
                 fontSize: 5,
               }}
+              type="button"
               onClick={toggleMenu}
               aria-controls="menu"
               aria-haspopup="true"
@@ -81,10 +90,22 @@ function Navigation() {
             }}
           >
             <div sx={{ ml: 6, pb: 4 }}>
-              <Logo />
+              <Link to="/">
+                <Img
+                  sx={{
+                    // Uses width because of weird bug with flex box and shrinking content we don't want shrunk
+                    width: 50,
+                    mr: 1,
+                  }}
+                  fluid={data.brandingLogo.childImageSharp.fluid}
+                  alt={data.site.siteMetadata.title}
+                  imgStyle={{ objectFit: "contain" }}
+                />
+              </Link>
+              <Title />
             </div>
             <ul id="menu" role="menu" sx={{ pb: 14 }}>
-              {data.allEpisode.nodes.map(episode => (
+              {data.allEpisode.nodes.map((episode) => (
                 <li role="none" key={episode.id}>
                   {episode.id === context.currEpId && <Bars />}
                   <Link
@@ -100,6 +121,7 @@ function Navigation() {
                     {/* /> */}
                   </Link>
                   <button
+                    type="button"
                     tabIndex="-1"
                     onClick={() => {
                       context.setCurrEpId(episode.id);

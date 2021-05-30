@@ -1,37 +1,51 @@
 /** @jsx jsx */
+import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { jsx } from 'theme-ui';
 import { FaExternalLinkAlt as ExternalLinkIcon } from 'react-icons/fa';
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-
 import { ContextConsumer } from '../Context';
 import itunesIcon from '../images/apple.svg';
-import spotifyImage from '../images/spotify.png';
+import spotifyImage from '../images/spotify.svg';
 import googleImage from '../images/google.svg';
 import Link from './link';
+import CTA from './cta';
+
 
 const PodcastProvider = styled(Link)(
   css({
-    mb: 5,
+    mt: 10,
+    mb: 2,
     display: 'flex',
     alignItems: 'center',
-    img: { m: 0, mr: 3 },
+    img: { m: 50, ml: 30, mb: 20, width: 100 },
   }),
 );
 
-const Aside = props => {
+function Aside() {
+  const data = useStaticQuery(graphql`
+    {
+      site {
+        siteMetadata {
+          description
+        }
+      }
+    }
+  `);
+
   return (
     <ContextConsumer>
-      {context => (
+      {(context) => (
         <aside className="sidebar">
           <div
             sx={{
-              mb: 2,
+              mb: 20,
               pr: [10, 0],
               a: { color: 'text', textDecoration: 'none' },
             }}
           >
+            <h5>Elsewhere</h5>
             {context.spotifyUrl && (
               <PodcastProvider to={context.spotifyUrl}>
                 <img src={spotifyImage} alt="Spotify logo" width="90" />
@@ -48,6 +62,18 @@ const Aside = props => {
               </PodcastProvider>
             )}
           </div>
+          <div>
+            <div
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h5>About</h5>
+              <h6 sx={{ mt: 3, mb: 1 }}>{data.site.siteMetadata.description}</h6>
+            </div>
+          </div>
+          <CTA />
         </aside>
       )}
     </ContextConsumer>

@@ -3,11 +3,12 @@ import Img from 'gatsby-image';
 import React from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import { jsx, useThemeUI, Box, Flex } from 'theme-ui';
-
+import Image from 'react-bootstrap/Image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import config from '../lib/config';
 import { ContextConsumer } from '../Context';
 
-const Header = props => {
+const Header = (props) => {
   const { episode, image } = props;
 
   const themeContext = useThemeUI();
@@ -15,17 +16,29 @@ const Header = props => {
 
   return (
     <ContextConsumer>
-      {context => (
+      {(context) => (
         <Box
           sx={{
             variant: 'header',
-            backgroundImage: '{image}'
+            backgroundImage: image
               ? 'none'
               : `linear-gradient(224deg, ${theme.colors.primaryLighten50} 0%, ${theme.colors.primaryDarken} 100%)`,
           }}
         >
-          <img src={image} alt={episode.title} />
+          <Image src={image} fluid
+            sx={{ height: config.headerImageHeight }}
+          />
 
+          {/*
+          {image && (
+            <Img
+              alt={episode.title}
+              fluid={image.childImageSharp.fluid}
+              sx={{ height: config.headerImageHeight }}
+            />
+          )}
+          <img src={image} alt={episode.title} />
+          */}
           <Box className="header_content">
             <Flex
               sx={{
@@ -38,6 +51,7 @@ const Header = props => {
             >
               <Flex sx={{ width: '100%' }}>
                 <button
+                  type="button"
                   onClick={() => {
                     context.setCurrEpId(episode.id);
                     context.setIsPlaying(!context.isPlaying);
@@ -47,7 +61,7 @@ const Header = props => {
                 </button>
                 <div>
                   <h1>{episode.title}</h1>
-                  <h5>EP{episode.num}</h5>
+                  {/*<h5>EP{episode.num}</h5>*/}
                 </div>
               </Flex>
             </Flex>

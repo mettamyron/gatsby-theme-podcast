@@ -1,4 +1,11 @@
+const path = require('path');
+
 module.exports = {
+  siteMetadata: {
+    title: 'Title',
+    description: 'Description',
+    author: '@rodriguesmyron',
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-react-helmet',
@@ -6,5 +13,33 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-theme-ui',
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Rubik\:300,300i,400,400i,700,700i,900,900i`,
+          `open sans pro\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      name: 'images',
+      options: {
+        path: path.resolve(`./src/images`)
+      }
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: path.resolve(`./src/images`)
+        }
+      }
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-image`,
   ],
 };
