@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { jsx, Container } from 'theme-ui';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { ContextConsumer } from '../Context';
 import './layout.css';
 import Navigation from './navigation';

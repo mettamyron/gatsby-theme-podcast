@@ -10,18 +10,15 @@ body {
 }
 
 .progress {
-  background: gray;
+  background: var(--text-color);
   /* height: 2rem; */
   cursor: crosshair;
   overflow: hidden;
 }
 .progress__time {
-  background: green;
-  border-right: 1px solid rgba(0, 0, 0, 0.1);
   min-width: 5px;
   height: 100%;
   transition: width 0.1s;
-  background: yellow;
 }
 
 article,
@@ -81,8 +78,8 @@ h1 {
   margin: 0.67em 0;
 }
 mark {
-  background-color: #ff0;
-  color: #000;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 small {
   font-size: 80%;
@@ -160,7 +157,7 @@ button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid var(--text-color);
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
@@ -215,7 +212,7 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: hsla(0, 0%, 0%, 0.8);
+  color: var(--text-color);
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -408,7 +405,7 @@ pre {
   margin-bottom: 1.45rem;
   font-size: 0.85rem;
   line-height: 1.42;
-  background: hsla(0, 0%, 0%, 0.04);
+  background: var(--text-color);
   border-radius: 3px;
   overflow: auto;
   word-wrap: normal;
@@ -487,7 +484,7 @@ hr {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: calc(1.45rem - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
+  background: var(--text-color);
   border: none;
   height: 1px;
 }
@@ -557,15 +554,15 @@ samp {
   line-height: 1.45rem;
 }
 abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted var(--text-color);
   cursor: help;
 }
 acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted var(--text-color);
   cursor: help;
 }
 abbr[title] {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
+  border-bottom: 1px dotted var(--text-color);
   cursor: help;
   text-decoration: none;
 }
@@ -575,7 +572,7 @@ thead {
 td,
 th {
   text-align: left;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
+  border-bottom: 1px solid var(--text-color);
   font-feature-settings: 'tnum';
   -moz-font-feature-settings: 'tnum';
   -ms-font-feature-settings: 'tnum';
@@ -595,7 +592,7 @@ td:last-child {
 }
 tt,
 code {
-  background-color: hsla(0, 0%, 0%, 0.04);
+  background-color: var(--text-color);
   border-radius: 3px;
   font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono',
     'Liberation Mono', Menlo, Courier, monospace;
@@ -638,7 +635,7 @@ pre tt:after {
 }
 
 .bar {
-  background: #a085ff;
+  background: var(--primaryLighten50-color);
   bottom: 1px;
   height: 3px;
   position: absolute;
@@ -653,12 +650,12 @@ pre tt:after {
 @keyframes sound {
   0% {
     opacity: 0.35;
-    background: #815eff;
+    background: var(--primary-color);
     width: 3px;
   }
   100% {
     opacity: 1;
-    background: #a085ff;
+    background: var(--primaryLighten10-color);
     width: 10px;
   }
 }
@@ -738,7 +735,7 @@ aside.sidebar h5 {
   margin-bottom: 0 !important;
 }
 
-aside {
+.sidebar {
   padding-left: 20px !important;
   padding-right: 20px !important;
 }

@@ -10,14 +10,16 @@ import itunesIcon from '../images/apple.svg';
 import spotifyImage from '../images/spotify.svg';
 import googleImage from '../images/google.svg';
 import Link from './link';
-import CTA from './cta';
+import AsideCTA from './asideCTA';
+import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
+import 'tachyons';
 
 
 const PodcastProvider = styled(Link)(
   css({
     mt: 10,
     mb: 2,
-    display: 'flex',
+    display: 'box',
     alignItems: 'center',
     img: { m: 50, ml: 30, mb: 20, width: 100 },
   }),
@@ -38,6 +40,18 @@ function Aside() {
     <ContextConsumer>
       {(context) => (
         <aside className="sidebar">
+          <div>
+            <div
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <h5>About</h5>
+              <h6 sx={{ mt: 3, mb: 1 }}>{data.site.siteMetadata.description}</h6>
+            </div>
+          </div>
+          <AsideCTA />
           <div
             sx={{
               mb: 20,
@@ -61,19 +75,30 @@ function Aside() {
                 <img src={googleImage} alt="Google Podcasts" />
               </PodcastProvider>
             )}
-          </div>
-          <div>
-            <div
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <h5>About</h5>
-              <h6 sx={{ mt: 3, mb: 1 }}>{data.site.siteMetadata.description}</h6>
+            <div className="flex flex-wrap justify-around w-100 mw3 mb5">
+              <div className="w-100 mw5 mb4">
+                <div className="flex flex-wrap justify-around w-100 mw3 center mb5">
+                  <div className="w-100 flex justify-around items-center pv0">
+                    {context.twitterID && (
+                      <a className="near-white" href={context.twitterID}>
+                        <FaTwitter />
+                      </a>
+                    )}
+                    {context.instagramID && (
+                      <a className="near-white" href={context.instagramID}>
+                        <FaInstagram />
+                      </a>
+                    )}
+                    {context.facebookID && (
+                      <a className="near-white" href={context.facebookID}>
+                        <FaFacebookF />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <CTA />
         </aside>
       )}
     </ContextConsumer>

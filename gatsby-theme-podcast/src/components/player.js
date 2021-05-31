@@ -320,7 +320,7 @@ export default class Player extends React.Component {
                 sx={{
                   width: `${progressTime}%`,
                   backgroundImage:
-                    'linear-gradient(224deg, #B298FF 0%, #7A5EFF 100%)',
+                    'linear-gradient(224deg, var(--primaryLighten50-color) 0%, var(--primary-color) 100%)',
                 }}
               />
             </div>

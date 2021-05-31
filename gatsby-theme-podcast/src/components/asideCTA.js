@@ -4,7 +4,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import Link from './link';
 
-const CTA = props => {
+const AsideCTA = props => {
   return (
     <div>
       <h5>Resources</h5>
@@ -17,4 +17,4 @@ const CTA = props => {
   );
 };
 
-export default CTA;
+export default AsideCTA;

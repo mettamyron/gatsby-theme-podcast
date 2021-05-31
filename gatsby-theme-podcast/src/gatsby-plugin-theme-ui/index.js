@@ -1,5 +1,6 @@
 import config from '../lib/config';
-import colors from '../colors';
+import fonts from '../fonts';
+
 
 export default {
   useCustomProperties: true,
@@ -7,7 +8,18 @@ export default {
   space: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   sizes: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 40, 48, 64],
-  colors: colors,
+  colors: {
+    text: 'rgba(0, 0, 0, 0.9)',
+    background: 'var(--background-color)',
+    backgroundLighten10: 'var(--backgroundLighten10-color)',
+    backgroundLighten20: 'var(--backgroundLighten20-color)',
+    primaryDarken: 'var(--primaryDarken-color)',
+    primary: 'var(--primary-color)',
+    primaryLighten10: 'var(--primaryLighten10-color)',
+    primaryLighten50: 'var(--primaryLighten50-color)',
+    primaryLighten70: 'var(--primaryLighten70-color)',
+    secondary: 'var(--secondary-color)',
+  },
   radii: [5, '50%'],
   fontWeights: {
     body: 400,
@@ -20,10 +32,7 @@ export default {
   letterSpacings: {
     heading: '1.5',
   },
-  fonts: {
-    body: 'Rubik, system-ui, sans-serif',
-    heading: 'inherit',
-  },
+  fonts: fonts,
   nav: {
     logo: {
       flexDirection: 'column',
@@ -46,7 +55,7 @@ export default {
     width: '100%',
     height: config.headerImageHeight,
     color: 'primary',
-    h1: { fontSize: [6, 8], textShadow: '0 2px 5px rgba(0,0,0,0.2)' },
+    h1: { fontSize: [6, 8] },
     'h1, h5': { m: 0 },
     h5: { mt: 1, fontSize: 1, opacity: 0.6 },
     '.header_content': {
@@ -192,6 +201,9 @@ export default {
       },
       'a:hover': {
         color: 'primaryLighten70',
+      },
+      'a.btn': {
+        color: 'background',
       },
       article: {
         p: [5, 8],

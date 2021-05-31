@@ -28,7 +28,7 @@ function Navigation() {
           num
         }
       }
-      brandingLogo: file(relativePath: { eq: "logo.png" }) {
+      brandingLogo: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
           fluid(maxHeight: 300) {
             ...GatsbyImageSharpFluid_withWebp

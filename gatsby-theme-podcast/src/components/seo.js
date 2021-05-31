@@ -26,6 +26,7 @@ const SEO = ({ description, lang, meta, title, image }) => {
         lang,
       }}
       title={title}
+      defer={false}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {

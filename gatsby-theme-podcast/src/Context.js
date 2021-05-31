@@ -9,6 +9,9 @@ export const ContextProvider = props => {
     applePodcastsUrl,
     googlePodcastsUrl,
     disqusShortName,
+    twitterID,
+    instagramID,
+    facebookID,
     defaultEpId,
   } = props;
 
@@ -22,6 +25,9 @@ export const ContextProvider = props => {
         applePodcastsUrl,
         googlePodcastsUrl,
         disqusShortName,
+        twitterID,
+        instagramID,
+        facebookID,
         currEpId,
         setCurrEpId,
         isPlaying,
