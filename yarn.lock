@@ -6340,6 +6340,17 @@ gatsby-plugin-image@^1.6.0:
     objectFitPolyfill "^2.3.0"
     prop-types "^15.7.2"
 
+gatsby-plugin-manifest@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-3.6.0.tgz#e7ca7d51daea1b9bfa358663b891a6a9673e0bf8"
+  integrity sha512-3+w4yitx47fEQ5kI9bvPxM1EcCGaRGVlCzugPcy1vYc9uaw0+KwiXFnX9Fx3WxGqTScMikparHAuM2xsIWOLhw==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    gatsby-core-utils "^2.6.0"
+    gatsby-plugin-utils "^1.6.0"
+    semver "^7.3.5"
+    sharp "^0.28.1"
+
 gatsby-plugin-offline@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-4.6.0.tgz#d6f0ad301a16fbb8d219ab82bc7147afb914c51b"
@@ -9075,22 +9086,17 @@ micromatch@^4.0.2:
     braces "^3.0.1"
     picomatch "^2.2.3"
 
-mime-db@1.47.0:
-  version "1.47.0"
-  resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.47.0.tgz#8cb313e59965d3c05cfbf898915a267af46a335c"
-  integrity sha512-QBmA/G2y+IfeS4oktet3qRZ+P5kPhCKRXxXnQEudYqUaEioAU1/Lq2us3D/t1Jfo4hE9REQPrbB7K5sOczJVIw==
-
-"mime-db@>= 1.43.0 < 2", mime-db@^1.28.0:
+mime-db@1.48.0, "mime-db@>= 1.43.0 < 2", mime-db@^1.28.0:
   version "1.48.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.48.0.tgz#e35b31045dd7eada3aaad537ed88a33afbef2d1d"
   integrity sha512-FM3QwxV+TnZYQ2aRqhlKBMHxk10lTbMt3bBkMAp54ddrNeVSfcQYOOKuGuy3Ddrm38I04If834fOUSq1yzslJQ==
 
 mime-types@^2.1.12, mime-types@^2.1.27, mime-types@^2.1.30, mime-types@~2.1.17, mime-types@~2.1.24:
-  version "2.1.30"
-  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.30.tgz#6e7be8b4c479825f85ed6326695db73f9305d62d"
-  integrity sha512-crmjA4bLtR8m9qLpHvgxSChT+XoSlZi8J4n/aIdn3z92e/U47Z0V/yl+Wh9W046GgFVAmoNR/fmdbZYcSSIUeg==
+  version "2.1.31"
+  resolved "https://registry.yarnpkg.com/mime-types/-/mime-types-2.1.31.tgz#a00d76b74317c61f9c2db2218b8e9f8e9c5c9e6b"
+  integrity sha512-XGZnNzm3QvgKxa8dpzyhFTHmpP3l5YNusmne07VUOXxou9CqUqYa/HBy124RqtVh/O2pECas/MOcsDgpilPOPg==
   dependencies:
-    mime-db "1.47.0"
+    mime-db "1.48.0"
 
 mime@1.6.0, mime@^1.3.4:
   version "1.6.0"
@@ -11712,7 +11718,7 @@ shallow-compare@^1.2.2:
   resolved "https://registry.yarnpkg.com/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg==
 
-sharp@^0.28.0:
+sharp@^0.28.0, sharp@^0.28.1:
   version "0.28.3"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.28.3.tgz#ecd74cefd020bee4891bb137c9850ee2ce277a8b"
   integrity sha512-21GEP45Rmr7q2qcmdnjDkNP04Ooh5v0laGS5FDpojOO84D1DJwUijLiSq8XNNM6e8aGXYtoYRh3sVNdm8NodMA==
@@ -13830,9 +13836,9 @@ xss@^1.0.6:
     cssfilter "0.0.10"
 
 xstate@^4.11.0, xstate@^4.14.0, xstate@^4.9.1:
-  version "4.19.2"
-  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.19.2.tgz#58ef6fc71737c76750ec61c5ff8b000101895d8a"
-  integrity sha512-eWI6kOHavcqhu1ACCmRowYGaQnH0KGvBoGg3lqmle9ZYyVWa2ZcVTgZlsK7o419/jw9gWX2LYmYGkm9w/VoXMA==
+  version "4.20.0"
+  resolved "https://registry.yarnpkg.com/xstate/-/xstate-4.20.0.tgz#6f241f2b49c840cb6e05b32544a6048362f558e2"
+  integrity sha512-u5Ou1CMo/oWApasmv1TYTHgj38k69DJdTqQdBBwt+/ooNhPJQiSIKTB3Y3HvX0h5tulwfSo6xAwZgBgjRsK3LA==
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@~4.0.1:
   version "4.0.2"
