@@ -12,8 +12,6 @@
   "dependencies": {
     "@rodriguesmyron/gatsby-theme-podcast": "*",
     "gatsby": "^3.4.1",
-    "gatsby-transformer-remark": "^4.3.0",
-    "gatsby-remark-responsive-iframe": "^4.3.0",
     "bootstrap": "^5.0.1",
     "react-bootstrap": "^1.6.0",
     "react": "^17.0.1",

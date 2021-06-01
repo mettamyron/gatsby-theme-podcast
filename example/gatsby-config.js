@@ -18,11 +18,5 @@ module.exports = {
         facebookID: 'https://facebook.com/itsjustmyron',
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [`gatsby-remark-responsive-iframe`],
-      },
-    },
   ],
 };

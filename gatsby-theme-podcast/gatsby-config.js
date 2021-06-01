@@ -31,6 +31,13 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://maitri.fm`,
+        stripQueryString: true
+      }
+    },
+    {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
