@@ -21,7 +21,7 @@ export default class Player extends React.Component {
     // for Server Side Rendering
     if (typeof window !== 'undefined') {
       const { episode } = this.props;
-      const lp = localStorage.getItem(`lastPlayed${episode.num}`);
+      const lp = localStorage.getItem(`lastPlayed${episode.id}`);
       const lastVolume = localStorage.getItem(`lastVolumeSetting`);
       if (lp) lastPlayed = JSON.parse(lp).lastPlayed;
       if (lastVolume) lastVolumePref = JSON.parse(lastVolume).lastVolumePref;
@@ -43,8 +43,8 @@ export default class Player extends React.Component {
   componentDidUpdate(prevProps) {
     const { episode, isPlaying } = this.props;
     const { currentTime, currentVolume } = this.state;
-    if (episode.num !== prevProps.episode.num) {
-      const lp = localStorage.getItem(`lastPlayed${episode.num}`);
+    if (episode.id !== prevProps.episode.id) {
+      const lp = localStorage.getItem(`lastPlayed${episode.id}`);
       if (lp) {
         const lastVolume = localStorage.getItem(`lastVolumeSetting`);
         const data = JSON.parse(lp);
@@ -59,7 +59,7 @@ export default class Player extends React.Component {
       }
     } else {
       localStorage.setItem(
-        `lastPlayed${episode.num}`,
+        `lastPlayed${episode.id}`,
         JSON.stringify({ lastPlayed: currentTime }),
       );
       localStorage.setItem(
@@ -79,7 +79,7 @@ export default class Player extends React.Component {
     const { timeWasLoaded } = this.state;
     // Check if the user already had a curent time
     if (timeWasLoaded) {
-      const lp = localStorage.getItem(`lastPlayed${episode.num}`);
+      const lp = localStorage.getItem(`lastPlayed${episode.id}`);
 
       if (lp) {
         e.currentTarget.currentTime = JSON.parse(lp).lastPlayed;
@@ -261,6 +261,8 @@ export default class Player extends React.Component {
                   zIndex: 999,
                   width: 40,
                   height: 60,
+                  backgroundImage:
+                    "linear-gradient(270deg, rgb(var(--backgroundLighten20-color)) 20%, rgba(var(--background-color), 0) 100%)",
                 },
                 h3: {
                   overflow: 'hidden',
@@ -268,9 +270,9 @@ export default class Player extends React.Component {
                   fontSize: 4,
                   display: 'block',
                 },
-                // ':hover': {
-                //   h3: { animation: `${bounce} 5s linear infinite` },
-                // },
+                ':hover': {
+                  h3: { animation: `${bounce} 5s linear infinite` },
+                },
               }}
             >
               <h3>{episode.title}</h3>
@@ -320,7 +322,7 @@ export default class Player extends React.Component {
                 sx={{
                   width: `${progressTime}%`,
                   backgroundImage:
-                    'linear-gradient(224deg, var(--primaryLighten50-color) 0%, var(--primary-color) 100%)',
+                    'linear-gradient(224deg, rgb(var(--primaryLighten50-color)) 0%, rgb(var(--primary-color)) 100%)',
                 }}
               />
             </div>

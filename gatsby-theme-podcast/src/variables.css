@@ -1,12 +1,12 @@
 * {
-  --text-color: rgb(0, 0, 0);
-  --background-color: #f5e8e0;
-  --backgroundLighten10-color: #f6eae3;
-  --backgroundLighten20-color: #f7ede6;
-  --primaryDarken-color: #3600f7;
-  --primary-color: #6236ff;
-  --primaryLighten10-color: #724aff;
-  --primaryLighten50-color: #b09aff;
-  --primaryLighten70-color: #d0c3ff;
-  --secondary-color: #da00b0;
+  --text-color: 0, 0, 0;
+  --background-color: 245, 232, 224;
+  --backgroundLighten10-color: 246, 234, 227;
+  --backgroundLighten20-color: 247, 237, 230;
+  --primaryDarken-color: 54, 0, 247;
+  --primary-color: 98, 54, 255;
+  --primaryLighten10-color: 114, 74, 255;
+  --primaryLighten50-color: 176, 154, 255;
+  --primaryLighten70-color: 208, 195, 255;
+  --secondary-color: 218, 0, 176;
 }
