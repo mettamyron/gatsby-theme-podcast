@@ -65,11 +65,13 @@ function Aside() {
                 <img src={spotifyImage} alt="Spotify logo" width="90" />
               </PodcastProvider>
             )}
+            <br />
             {context.applePodcastsUrl && (
               <PodcastProvider to={context.applePodcastsUrl}>
                 <img src={itunesIcon} alt="Apple Podcasts" />
               </PodcastProvider>
             )}
+            <br />
             {context.googlePodcastsUrl && (
               <PodcastProvider to={context.googlePodcastsUrl}>
                 <img src={googleImage} alt="Google Podcasts" />

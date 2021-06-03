@@ -2,7 +2,7 @@
   "name": "@rodriguesmyron/gatsby-theme-podcast",
   "main": "index.js",
   "description": "Podcast gatsby theme.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": "@rodriguesmyron",
   "license": "MIT",
   "scripts": {
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sofa-boys/gatsby-theme-podcast"
+    "url": "https://github.com/rodriguesmyron/gatsby-theme-podcast"
   },
   "bugs": {
-    "url": "https://github.com/sofa-boys/gatsby-theme-podcast/issues"
+    "url": "https://github.com/rodriguesmyron/gatsby-theme-podcast/issues"
   },
   "dependencies": {
     "axios": "^0.21.1",
