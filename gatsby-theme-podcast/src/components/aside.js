@@ -48,7 +48,6 @@ function Aside() {
               }}
             >
               <h5>About</h5>
-              <h6 sx={{ mt: 3, mb: 1 }}>{data.site.siteMetadata.description}</h6>
             </div>
           </div>
           <AsideCTA />

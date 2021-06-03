@@ -19,6 +19,7 @@ function Navigation() {
       site {
         siteMetadata {
           title
+          description
         }
       }
       allEpisode {
@@ -39,11 +40,14 @@ function Navigation() {
   `);
 
   const Title = () => (
-    <Link to="/">
-      <h1 sx={{ fontSize: 6, color: 'primary', mb: 0 }}>
-        {data.site.siteMetadata.title}
-      </h1>
-    </Link>
+    <>
+      <Link to="/">
+        <h1 sx={{ fontSize: 6, color: 'primary', mb: 0 }}>
+          {data.site.siteMetadata.title}
+        </h1>
+      </Link>
+      <h6 sx={{ mt: 3, mb: 1 }}>{data.site.siteMetadata.description}</h6>
+    </>
   );
 
 
