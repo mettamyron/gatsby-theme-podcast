@@ -19,6 +19,7 @@ module.exports = {
         pubDate: item.pubDate[0],
         num: item['itunes:episode'] ? parseInt(item['itunes:episode'][0]) : 0,
         title: item.title[0],
+        slug: item.title[0].replace(/\s+/g, '-').toLowerCase(),
         descriptionHtml: item.description[0],
         enclosureUrl: item.enclosure[0].$.url,
         coverImgUrl: item['itunes:image'][0].$.href,
@@ -46,6 +47,7 @@ module.exports = {
           nodes {
             id
             num
+            slug
           }
         }
       }
@@ -55,7 +57,7 @@ module.exports = {
         ? options.episodeSlug
         : 'episodes';
       actions.createPage({
-        path: `${episodeSlug}/${node.id}`,
+        path: `${episodeSlug}/${node.slug}`,
         component: require.resolve(`./src/templates/episode.js`),
         context: {
           id: node.id,

@@ -26,6 +26,7 @@ function Navigation() {
         nodes {
           id
           title
+          slug
           num
         }
       }
@@ -115,7 +116,7 @@ function Navigation() {
                   <Link
                     role="menuitem"
                     activeClassName="active"
-                    to={`/episodes/${episode.id}`}
+                    to={`/episodes/${episode.slug}`}
                   >
                     <h4>{episode.title}</h4>
                     {/* <div */}

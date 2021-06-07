@@ -221,10 +221,10 @@ export default class Player extends React.Component {
             <button
               tabIndex="0"
               sx={{
-                color: 'primary',
+                color: 'background',
                 border: '1px solid',
                 borderColor: 'primary',
-                backgroundColor: 'background',
+                backgroundColor: 'primary',
                 width: '100%',
                 maxWidth: 40,
                 height: 40,

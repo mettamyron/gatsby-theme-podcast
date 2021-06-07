@@ -6,12 +6,13 @@ export default () => {
     {
       episode {
         id
+        slug
       }
     }
   `);
 
   useEffect(() => {
-    navigate(`/episodes/${data.episode.id}`);
+    navigate(`/episodes/${data.episode.slug}`);
   });
 
   return null;
