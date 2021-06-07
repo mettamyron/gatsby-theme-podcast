@@ -1,5 +1,7 @@
 import { navigate, useStaticQuery, graphql } from 'gatsby';
 import React, { useEffect } from 'react';
+import SEO from '../components/seo'
+
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -15,5 +17,9 @@ export default () => {
     navigate(`/episodes/${data.episode.slug}`);
   });
 
-  return null;
+  return (
+    <>
+      <SEO />
+    </>
+  )
 };
