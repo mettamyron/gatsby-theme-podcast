@@ -36,7 +36,7 @@ module.exports = themeOptions => {
         resolve: `gatsby-source-filesystem`,
         name: 'images',
         options: {
-          path: path.resolve(`./src/images`),
+          path: path.resolve(`./static/images`),
         },
       },
       {
@@ -44,14 +44,6 @@ module.exports = themeOptions => {
         options: {
           siteUrl: `https://maitri.fm`,
           stripQueryString: true,
-        },
-      },
-      {
-        resolve: 'gatsby-plugin-react-svg',
-        options: {
-          rule: {
-            include: path.resolve(`./src/images`),
-          },
         },
       },
       {

@@ -40,16 +40,6 @@ function Aside() {
     <ContextConsumer>
       {(context) => (
         <aside className="sidebar">
-          <div>
-            <div
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-              }}
-            >
-              <h5>About</h5>
-            </div>
-          </div>
           <AsideCTA />
           <div
             sx={{

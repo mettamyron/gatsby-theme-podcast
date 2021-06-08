@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'The loving+kindness podcast',
+    title: 'Maitri',
     description: 'The Maitri podcast',
     author: '@rodriguesmyron',
     keywords: 'keyword1, keyword2, keyword3, keyword4',
+    image: '/images/icon.png',
+    siteUrl: 'https://maitri.fm',
   },
   plugins: [
     {

@@ -4,7 +4,7 @@ module.exports = themeOptions =>
   merge(
     {
       manifest: {
-        icon: `src/images/icon.png`,
+        icon: `static/images/icon.png`,
         start_url: `/`,
       },
     },
