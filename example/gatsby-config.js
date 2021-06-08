@@ -3,6 +3,8 @@ module.exports = {
     title: 'The loving+kindness podcast',
     description: 'The Maitri podcast',
     author: '@rodriguesmyron',
+    keywords: 'keyword1, keyword2, keyword3, keyword4',
+    image: '/images/icon.png',
   },
   plugins: [
     {

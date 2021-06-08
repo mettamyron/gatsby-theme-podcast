@@ -9,8 +9,12 @@ module.exports = themeOptions => {
       title: 'Title',
       description: 'Description',
       author: '@rodriguesmyron',
+      keywords: 'keyword1, keyword2, keyword3, keyword4',
+      image: 'src/images/icon.png',
     },
     plugins: [
+      `gatsby-plugin-advanced-sitemap`,
+      'gatsby-plugin-robots-txt',
       {
         resolve: 'gatsby-plugin-react-helmet',
       },
@@ -22,32 +26,33 @@ module.exports = themeOptions => {
         options: {
           fonts: [
             `Rubik\:300,300i,400,400i,700,700i,900,900i`,
-            `open sans pro\:300,400,400i,700` // you can also specify font weights and styles
+            `open sans pro\:300,400,400i,700`,
           ],
-          display: 'swap'
-        }
+          display: 'swap',
+        },
       },
+      `gatsby-plugin-image`,
       {
         resolve: `gatsby-source-filesystem`,
         name: 'images',
         options: {
-          path: path.resolve(`./src/images`)
-        }
+          path: path.resolve(`./src/images`),
+        },
       },
       {
         resolve: `gatsby-plugin-react-helmet-canonical-urls`,
         options: {
           siteUrl: `https://maitri.fm`,
-          stripQueryString: true
-        }
+          stripQueryString: true,
+        },
       },
       {
-        resolve: "gatsby-plugin-react-svg",
+        resolve: 'gatsby-plugin-react-svg',
         options: {
           rule: {
-            include: path.resolve(`./src/images`)
-          }
-        }
+            include: path.resolve(`./src/images`),
+          },
+        },
       },
       {
         resolve: `gatsby-plugin-manifest`,
@@ -57,8 +62,7 @@ module.exports = themeOptions => {
       },
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
-      `gatsby-plugin-image`,
-      `gatsby-plugin-offline`
+      `gatsby-plugin-offline`,
     ],
   }
 }

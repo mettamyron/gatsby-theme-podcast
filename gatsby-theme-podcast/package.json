@@ -2,7 +2,7 @@
   "name": "@rodriguesmyron/gatsby-theme-podcast",
   "main": "index.js",
   "description": "Podcast gatsby theme.",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "author": "@rodriguesmyron",
   "license": "MIT",
   "scripts": {
@@ -35,6 +35,8 @@
     "gatsby-plugin-react-svg": "^3.0.1",
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-manifest": "^3.6.0",
+    "gatsby-plugin-advanced-sitemap": "^2.0.0",
+    "gatsby-plugin-robots-txt": "^1.6.2",
     "@emotion/react": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "prop-types": "^15.7.2",

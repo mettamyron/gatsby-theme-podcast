@@ -1,7 +1,6 @@
 import { navigate, useStaticQuery, graphql } from 'gatsby';
 import React, { useEffect } from 'react';
 import SEO from '../components/seo';
-import Aside from '../components/aside';
 
 export default () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +25,7 @@ export default () => {
 
   return (
     <>
-      <SEO description={data.site.siteMetadata.description} />
+      <SEO title="Home" />
       <div
         sx={{
           display: 'flex',
@@ -34,10 +33,13 @@ export default () => {
         }}
       >
         <div sx={{ maxWidth: ['100%', 600] }}>
-          <p>.</p>
+          <div>
+            <article>
+              <p>.</p>
+            </article>
+          </div>
         </div>
       </div>
-      <Aside />
     </>
   );
 };
