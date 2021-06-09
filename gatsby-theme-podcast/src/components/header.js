@@ -24,9 +24,17 @@ const Header = (props) => {
               ? 'none'
               : `linear-gradient(224deg, ${theme.colors.primaryLighten50} 0%, ${theme.colors.primaryDarken} 100%)`,
           }}
+          css={{
+            backgroundImage:
+              'linear-gradient(180deg, rgb(var(--primaryLighten10-color)) 0%, rgb(var(--primaryDarken-color)) 100%)',
+          }}
         >
-          <Image src={image} fluid
+          <Image
+            src={image}
+            fluid
+            bsPrefix='header-image'
             sx={{ height: config.headerImageHeight }}
+            css={{ objectFit: 'contain' }}
           />
 
           {/*

@@ -21,5 +21,15 @@ module.exports = {
         facebookID: 'https://facebook.com/itsjustmyron',
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Rozha One\:400`,
+          `Montserrat\:100,100i,200,200i,300,300i,400,400i,700,700i,800,800i,900,900i` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    },
   ],
 };

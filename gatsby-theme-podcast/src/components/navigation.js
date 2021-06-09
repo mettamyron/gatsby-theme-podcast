@@ -5,7 +5,7 @@ import React from 'react';
 import { jsx, Flex } from 'theme-ui';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import { MdMenu as MenuIcon, MdClose as CloseMenuIcon } from 'react-icons/md';
-
+import onClickOutside from "react-onclickoutside";
 import { ContextConsumer } from '../Context';
 import Link from './link';
 import Bars from './bars';
@@ -13,7 +13,7 @@ import Bars from './bars';
 function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-
+  Navigation.handleClickOutside = () => setIsOpen(false);
   const data = useStaticQuery(graphql`
     {
       site {
@@ -43,7 +43,9 @@ function Navigation() {
   const Title = () => (
     <>
       <Link to="/">
-        <h1 sx={{ fontSize: 6, color: 'primary', mb: 0 }}>
+        <h1
+          sx={{ fontFamily: 'heading', fontSize: 6, color: 'primary', mb: 0 }}
+        >
           {data.site.siteMetadata.title}
         </h1>
       </Link>
@@ -104,7 +106,7 @@ function Navigation() {
                   }}
                   fluid={data.brandingLogo.childImageSharp.fluid}
                   alt={data.site.siteMetadata.title}
-                  imgStyle={{ objectFit: "contain" }}
+                  imgStyle={{ objectFit: 'contain' }}
                 />
               </Link>
               <Title />
@@ -118,7 +120,7 @@ function Navigation() {
                     activeClassName="active"
                     to={`/episodes/${episode.slug}`}
                   >
-                    <h4>{episode.title}</h4>
+                    <h4 sx={{ fontWeight: 900 }}>{episode.title}</h4>
                     {/* <div */}
                     {/*   dangerouslySetInnerHTML={{ */}
                     {/*     __html: episode.descriptionHtml, */}
@@ -149,4 +151,8 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+const clickOutsideConfig = {
+  handleClickOutside: () => Navigation.handleClickOutside,
+};
+
+export default onClickOutside(Navigation, clickOutsideConfig);
