@@ -32,7 +32,7 @@ export default () => {
           flexDirection: ['column', 'row'],
         }}
       >
-        <div sx={{ maxWidth: ['100%', 600] }}>
+        <div sx={{ maxWidth: ['100%', 710] }}>
           <div>
             <article>
               <p>.</p>
