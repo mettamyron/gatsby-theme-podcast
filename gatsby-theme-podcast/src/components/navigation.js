@@ -5,7 +5,6 @@ import React from 'react';
 import { jsx, Flex } from 'theme-ui';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import { MdMenu as MenuIcon, MdClose as CloseMenuIcon } from 'react-icons/md';
-import onClickOutside from "react-onclickoutside";
 import { ContextConsumer } from '../Context';
 import Link from './link';
 import Bars from './bars';
@@ -13,7 +12,6 @@ import Bars from './bars';
 function Navigation() {
   const [isOpen, setIsOpen] = React.useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  Navigation.handleClickOutside = () => setIsOpen(false);
   const data = useStaticQuery(graphql`
     {
       site {
@@ -52,8 +50,6 @@ function Navigation() {
       <h6 sx={{ mt: 3, mb: 1 }}>{data.site.siteMetadata.description}</h6>
     </>
   );
-
-
   return (
     <ContextConsumer>
       {(context) => (
@@ -63,12 +59,7 @@ function Navigation() {
               variant: 'nav.logo.container',
             }}
           >
-            <Flex
-              sx={{
-                variant: 'nav.logo',
-              }}
-            >
-            </Flex>
+            <Flex sx={{ variant: 'nav.logo' }} />
             <button
               sx={{
                 position: 'relative',
@@ -121,11 +112,13 @@ function Navigation() {
                     to={`/episodes/${episode.slug}`}
                   >
                     <h4 sx={{ fontWeight: 900 }}>{episode.title}</h4>
-                    {/* <div */}
-                    {/*   dangerouslySetInnerHTML={{ */}
-                    {/*     __html: episode.descriptionHtml, */}
-                    {/*   }} */}
-                    {/* /> */}
+                    {/* 
+                    <div
+                    dangerouslySetInnerHTML={{ 
+                    __html: episode.descriptionHtml,
+                    }}
+                    />
+                    */}
                   </Link>
                   <button
                     type="button"
@@ -151,8 +144,4 @@ function Navigation() {
   );
 }
 
-const clickOutsideConfig = {
-  handleClickOutside: () => Navigation.handleClickOutside,
-};
-
-export default onClickOutside(Navigation, clickOutsideConfig);
+export default Navigation;
