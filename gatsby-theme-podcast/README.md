@@ -50,5 +50,6 @@ Source links:
 - https://github.com/luiskunz/gatsby-theme-podcast
 
 ## Known issues and possible improvements
-- ~~Since it is impossible to retrieve a unique `num` value (might work for Anchor podcasts), this theme creates pages with the `id` instead, which looks unwieldy. Could possibly use `contentDigest` instead.~~Uses the slugified title now.
-- Had no luck with [gatsby-plugin-remote-images](https://github.com/graysonhicks/gatsby-plugin-remote-images), so a possible alternative is to create a new [file node](https://egghead.io/lessons/gatsby-optimize-remote-images-in-a-gatsby-source-plugin) while creating the node pages, which can then be optimized using gatsby-image.
+<ul><li><strike>Since it is impossible to retrieve a unique `num` value (might work for Anchor podcasts), this theme creates pages with the `id` instead, which looks unwieldy. Could possibly use `contentDigest` instead.</strike>Uses the slugified title now.</li>
+<li>Had no luck with [gatsby-plugin-remote-images](https://github.com/graysonhicks/gatsby-plugin-remote-images), so a possible alternative is to create a new [file node](https://egghead.io/lessons/gatsby-optimize-remote-images-in-a-gatsby-source-plugin) while creating the node pages, which can then be optimized using gatsby-image.</li>
+</ul>
