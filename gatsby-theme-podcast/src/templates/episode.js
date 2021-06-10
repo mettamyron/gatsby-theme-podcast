@@ -38,7 +38,7 @@ const EpisodeTemplate = ({ data }) => {
           flexDirection: ['column', 'row'],
         }}
       >
-        <div sx={{ maxWidth: ['100%', 600] }}>
+        <div sx={{ maxWidth: ['100%', 710] }}>
           <Header episode={episode} image={episode.coverImgUrl} />
           <article>
             <div
