@@ -57,9 +57,9 @@ export default {
     height: config.headerImageHeight,
     color: 'text',
     fontFamily: 'heading',
-    h1: { fontSize: [8, 8] },
     'h1, h5': { m: 0 },
-    h5: { mt: 1, fontSize: 1, opacity: 0.6 },
+    h1: { fontSize: [6, 8], mt: [2, 0] },
+    h5: { mt: 1, fontSize: 1, opacity: 0.2 },
     '.header_content': {
       width: '100%',
       height: '100%',
@@ -212,6 +212,7 @@ export default {
         pb: [2, 14],
         borderLeft: '2px solid',
         borderRight: '2px solid',
+        borderBottom: '2px solid',
         borderColor: 'backgroundLighten10',
       },
       '.sidebar': {

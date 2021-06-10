@@ -68,7 +68,7 @@ const Header = (props) => {
                   {context.isPlaying ? <FaPause /> : <FaPlay />}
                 </button>
                 <div>
-                  <h1>{episode.title}</h1>
+                  <h1 className="header">{episode.title}</h1>
                   {/*<h5>EP{episode.num}</h5>*/}
                 </div>
               </Flex>
