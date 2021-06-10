@@ -128,7 +128,7 @@ export default {
             backgroundColor: 'backgroundLighten10',
           },
           a: {
-            px: 5,
+            px: 2,
             py: 4,
             borderLeft: '3px solid',
             borderColor: 'background',
@@ -140,20 +140,15 @@ export default {
             '.active': {
               borderColor: 'primary',
             },
-            button: {
-              opacity: 1,
-              ':hover': {
-                opacity: 1,
-              },
-            },
           },
           h4: {
             mb: 0,
           },
           button: {
-            position: 'absolute',
-            opacity: 0,
-            ml: -3,
+            position: 'relative',
+            opacity: 1,
+            ml: 2,
+            mr: 5,
             backgroundColor: 'primary',
             border: '1px solid',
             borderColor: 'primary',

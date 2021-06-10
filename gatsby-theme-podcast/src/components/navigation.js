@@ -88,6 +88,7 @@ function Navigation() {
                 backgroundColor: 'background',
                 color: 'text',
                 borderColor: 'text',
+                borderRadius: 5,
                 fontSize: 5,
               }}
               type="button"

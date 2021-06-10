@@ -2,7 +2,7 @@
   "name": "@rodriguesmyron/gatsby-theme-podcast",
   "main": "index.js",
   "description": "Podcast gatsby theme.",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "author": "@rodriguesmyron",
   "license": "MIT",
   "scripts": {
