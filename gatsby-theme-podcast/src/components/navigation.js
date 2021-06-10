@@ -38,6 +38,23 @@ function Navigation() {
     }
   `);
 
+  const Logo = () => (
+    <>
+      <Link to="/">
+        <Img
+          sx={{
+            // Uses width because of weird bug with flex box and shrinking content we don't want shrunk
+            width: 50,
+            mr: 1,
+          }}
+          fluid={data.brandingLogo.childImageSharp.fluid}
+          alt={data.site.siteMetadata.title}
+          imgStyle={{ objectFit: 'contain' }}
+        />
+      </Link>
+    </>
+  );
+
   const Title = () => (
     <>
       <Link to="/">
@@ -59,7 +76,9 @@ function Navigation() {
               variant: 'nav.logo.container',
             }}
           >
-            <Flex sx={{ variant: 'nav.logo' }} />
+            <Flex sx={{ variant: 'nav.logo' }} >
+              <Logo />
+            </Flex>
             <button
               sx={{
                 position: 'relative',
@@ -88,18 +107,7 @@ function Navigation() {
             }}
           >
             <div sx={{ ml: 6, pb: 4 }}>
-              <Link to="/">
-                <Img
-                  sx={{
-                    // Uses width because of weird bug with flex box and shrinking content we don't want shrunk
-                    width: 50,
-                    mr: 1,
-                  }}
-                  fluid={data.brandingLogo.childImageSharp.fluid}
-                  alt={data.site.siteMetadata.title}
-                  imgStyle={{ objectFit: 'contain' }}
-                />
-              </Link>
+              <Logo />
               <Title />
             </div>
             <ul id="menu" role="menu" sx={{ pb: 14 }}>
