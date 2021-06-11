@@ -69,6 +69,10 @@ const SEO = ({ description, lang, meta, title, image }) => {
           content: metaDescription,
         },
         {
+          name: `twitter:image`,
+          content: metaImage,
+        },
+        {
           name: `og:image`,
           content: metaImage,
         },

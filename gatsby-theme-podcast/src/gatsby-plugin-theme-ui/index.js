@@ -153,7 +153,6 @@ export default {
             border: '1px solid',
             borderColor: 'primary',
             color: 'background',
-            display: 'flex',
             width: '24px',
             height: '24px',
             flexGrow: '1',
