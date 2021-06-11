@@ -1,7 +1,6 @@
 import config from '../lib/config';
 import fonts from '../fonts';
 
-
 export default {
   useCustomProperties: true,
   breakpoints: ['992px', '1200px', '1920px'],
@@ -153,8 +152,10 @@ export default {
             border: '1px solid',
             borderColor: 'primary',
             color: 'background',
-            width: '24px',
-            height: '24px',
+            display: 'flex',
+            width: '100%',
+            maxWidth: 5,
+            height: 5,
             flexGrow: '1',
             borderRadius: '50%',
             alignItems: 'center',
