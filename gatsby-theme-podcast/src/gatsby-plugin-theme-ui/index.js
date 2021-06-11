@@ -3,7 +3,7 @@ import fonts from '../fonts';
 
 export default {
   useCustomProperties: true,
-  breakpoints: ['832px', '1200px', '1920px'],
+  breakpoints: ['992px', '1200px', '1920px'],
   space: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   sizes: [0, 4, 8, 12, 16, 20, 24, 32, 40, 48, 56, 64, 72, 80, 128, 256, 512],
   fontSizes: [12, 14, 16, 18, 20, 22, 24, 32, 40, 48, 64],
