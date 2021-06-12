@@ -2,18 +2,16 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import { jsx } from 'theme-ui';
-import { FaExternalLinkAlt as ExternalLinkIcon } from 'react-icons/fa';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
+import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
+import itunesImage from '../../static/images/apple.svg';
+import spotifyImage from '../../static/images/spotify.svg';
+import googleImage from '../../static/images/google.svg';
 import { ContextConsumer } from '../Context';
-import itunesIcon from '../images/apple.svg';
-import spotifyImage from '../images/spotify.svg';
-import googleImage from '../images/google.svg';
 import Link from './link';
 import AsideCTA from './asideCTA';
-import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
 import 'tachyons';
-
 
 const PodcastProvider = styled(Link)(
   css({
@@ -57,7 +55,7 @@ function Aside() {
             <br />
             {context.applePodcastsUrl && (
               <PodcastProvider to={context.applePodcastsUrl}>
-                <img src={itunesIcon} alt="Apple Podcasts" />
+                <img src={itunesImage} alt="Apple Podcasts" />
               </PodcastProvider>
             )}
             <br />

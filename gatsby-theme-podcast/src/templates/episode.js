@@ -18,6 +18,16 @@ export const episodeQuery = graphql`
       num
       enclosureUrl
       coverImgUrl
+      localImage {
+        childImageSharp {
+          fluid(maxWidth: 700) {
+            ...GatsbyImageSharpFluid
+          }
+          fixed {
+            src
+          }
+        }
+      }
     }
   }
 `;
@@ -29,7 +39,7 @@ const EpisodeTemplate = ({ data }) => {
     <>
       <SEO
         title={episode.title}
-        image={episode.coverImgUrl}
+        image={episode.localImage.childImageSharp.fixed.src}
         description={episode.descriptionHtml}
       />
       <div
@@ -39,16 +49,17 @@ const EpisodeTemplate = ({ data }) => {
         }}
       >
         <div sx={{ maxWidth: ['100%', 710] }}>
-          <Header episode={episode} image={episode.coverImgUrl} />
+          <Header episode={episode} image={episode.localImage} />
           <article>
             <div
+              // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{
                 __html: episode.descriptionHtml,
               }}
             />
           </article>
           <ContextConsumer>
-            {context => (
+            {(context) => (
               <DiscussionEmbed
                 shortname={context.disqusShortName}
                 config={{

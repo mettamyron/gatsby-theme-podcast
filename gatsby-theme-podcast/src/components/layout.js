@@ -36,7 +36,7 @@ const Layout = props => {
       <Navigation />
       <main sx={{ width: '100%', ml: [0, 0, 0, 5] }}>{props.children}</main>
       <ContextConsumer>
-        {context => (
+        {(context) => (
           <Player
             episode={
               data.allEpisode.nodes.filter(n => n.id === context.currEpId)[0]

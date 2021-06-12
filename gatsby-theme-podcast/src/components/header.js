@@ -3,8 +3,6 @@ import Img from 'gatsby-image';
 import React from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa';
 import { jsx, useThemeUI, Box, Flex } from 'theme-ui';
-import Image from 'react-bootstrap/Image';
-import { GatsbyImage } from 'gatsby-plugin-image';
 import config from '../lib/config';
 import { ContextConsumer } from '../Context';
 
@@ -29,24 +27,14 @@ const Header = (props) => {
               'linear-gradient(180deg, rgb(var(--primaryLighten10-color)) 0%, rgb(var(--primaryDarken-color)) 100%)',
           }}
         >
-          <Image
-            src={image}
-            fluid
-            bsPrefix='header-image'
-            sx={{ height: config.headerImageHeight }}
-            css={{ objectFit: 'contain' }}
-          />
-
-          {/*
           {image && (
             <Img
               alt={episode.title}
               fluid={image.childImageSharp.fluid}
+              imgStyle={{ objectFit: 'contain' }}
               sx={{ height: config.headerImageHeight }}
             />
           )}
-          <img src={image} alt={episode.title} />
-          */}
           <Box className="header_content">
             <Flex
               sx={{
@@ -69,7 +57,6 @@ const Header = (props) => {
                 </button>
                 <div>
                   <h1 className="header">{episode.title}</h1>
-                  {/*<h5>EP{episode.num}</h5>*/}
                 </div>
               </Flex>
             </Flex>
