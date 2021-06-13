@@ -154,6 +154,7 @@ export default {
             maxWidth: 5,
             height: 5,
             flexGrow: '1',
+            border: '0px',
             borderRadius: '50%',
             borderColor: 'background',
             alignItems: 'center',
