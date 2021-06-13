@@ -48,12 +48,6 @@ module.exports = {
         icon: path.resolve(`./static/images/icon.png`),
       },
     },
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        exclude: ['/'],
-      },
-    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-offline`,
