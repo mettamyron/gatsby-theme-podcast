@@ -155,6 +155,7 @@ export default {
             height: 5,
             flexGrow: '1',
             borderRadius: '50%',
+            borderColor: 'background',
             alignItems: 'center',
             justifyContent: 'center',
             svg: { mt: '0px', ml: '1px' },
