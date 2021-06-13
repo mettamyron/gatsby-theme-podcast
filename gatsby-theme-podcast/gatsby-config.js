@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-advanced-sitemap`,
     'gatsby-plugin-robots-txt',
+    `gatsby-plugin-material-ui`,
     {
       resolve: 'gatsby-plugin-react-helmet',
     },

@@ -4,6 +4,8 @@ import Img from "gatsby-image";
 import React from 'react';
 import { jsx, Flex } from 'theme-ui';
 import { FaPlay, FaPause } from 'react-icons/fa';
+import PlayCircleFilledRoundedIcon from '@material-ui/icons/PlayCircleFilledRounded';
+import PauseCircleFilledRoundedIcon from '@material-ui/icons/PauseCircleFilledRounded';
 import { MdMenu as MenuIcon, MdClose as CloseMenuIcon } from 'react-icons/md';
 import { ContextConsumer } from '../Context';
 import Link from './link';
@@ -138,9 +140,9 @@ function Navigation() {
                     }}
                   >
                     {episode.id === context.currEpId && context.isPlaying ? (
-                      <FaPause />
+                      <PauseCircleFilledRoundedIcon />
                     ) : (
-                      <FaPlay />
+                      <PlayCircleFilledRoundedIcon />
                     )}
                   </button>
                 </li>
