@@ -19,6 +19,7 @@ module.exports = {
         twitterID: 'https://twitter.com/itsjustmyron',
         instagramID: 'https://instagram.com/itsjustmyron',
         facebookID: 'https://facebook.com/itsjustmyron',
+        logoUrl: 'https://www.maitri.pub',
       },
     },
     {

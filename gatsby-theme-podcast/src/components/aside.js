@@ -5,9 +5,10 @@ import { jsx } from 'theme-ui';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { FaInstagram, FaFacebookF, FaTwitter, FaYoutube } from 'react-icons/fa';
-import itunesImage from '../../static/images/apple.svg';
-import spotifyImage from '../../static/images/spotify.svg';
-import googleImage from '../../static/images/google.svg';
+import ItunesImage from '../../static/svg/apple.svg';
+import SpotifyImage from '../../static/svg/spotify.svg';
+import GoogleImage from '../../static/svg/google.svg';
+import LogoImage from '../../static/svg/logo.svg';
 import { ContextConsumer } from '../Context';
 import Link from './link';
 import AsideCTA from './asideCTA';
@@ -16,10 +17,10 @@ import 'tachyons';
 const PodcastProvider = styled(Link)(
   css({
     mt: 10,
-    mb: 2,
+    mb: 20,
     display: 'box',
     alignItems: 'center',
-    img: { m: 50, ml: 30, mb: 20, width: 100 },
+    svg: { height: 'auto', width: 100, marginBottom: 5 },
   }),
 );
 
@@ -49,19 +50,19 @@ function Aside() {
             <h5>Elsewhere</h5>
             {context.spotifyUrl && (
               <PodcastProvider to={context.spotifyUrl}>
-                <img src={spotifyImage} alt="Spotify logo" width="90" />
+                <ItunesImage />
               </PodcastProvider>
             )}
             <br />
             {context.applePodcastsUrl && (
               <PodcastProvider to={context.applePodcastsUrl}>
-                <img src={itunesImage} alt="Apple Podcasts" />
+                <SpotifyImage />
               </PodcastProvider>
             )}
             <br />
             {context.googlePodcastsUrl && (
               <PodcastProvider to={context.googlePodcastsUrl}>
-                <img src={googleImage} alt="Google Podcasts" />
+                <GoogleImage />
               </PodcastProvider>
             )}
             <div className="flex flex-wrap justify-around w-100 mw3 mb5">
@@ -81,6 +82,11 @@ function Aside() {
                     {context.facebookID && (
                       <a className="near-white" href={context.facebookID}>
                         <FaFacebookF />
+                      </a>
+                    )}
+                    {context.logoUrl && (
+                      <a className="near-white" href={context.logoUrl}>
+                        <LogoImage />
                       </a>
                     )}
                   </div>

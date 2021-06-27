@@ -34,6 +34,7 @@ export const wrapRootElement = ({ element }, options) => (
           twitterID={options.twitterID}
           instagramID={options.instagramID}
           facebookID={options.facebookID}
+          logoUrl={options.logoUrl}
           defaultEpId={data.allEpisode.nodes[0].id}
         >
           {element}

@@ -304,6 +304,8 @@ export default class Player extends React.Component {
                 borderRadius: ['3px', '0px'],
                 maxWidth: 460,
                 backgroundColor: 'backgroundLighten20',
+                cursor: 'crosshair',
+                overflow: 'hidden',
               }}
               className="progress"
               onClick={this.scrub}
@@ -321,6 +323,9 @@ export default class Player extends React.Component {
                 className="progress__time"
                 sx={{
                   width: `${progressTime}%`,
+                  minWidth: '5px',
+                  height: '100%',
+                  transition: 'width 0.1s',
                   backgroundImage:
                     'linear-gradient(224deg, rgb(var(--primaryLighten50-color)) 0%, rgb(var(--primary-color)) 100%)',
                 }}

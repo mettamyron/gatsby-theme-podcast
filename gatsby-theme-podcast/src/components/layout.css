@@ -9,17 +9,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.progress {
-  background: rgb(var(--text-color));
-  /* height: 2rem; */
-  cursor: crosshair;
-  overflow: hidden;
-}
-.progress__time {
-  min-width: 5px;
-  height: 100%;
-  transition: width 0.1s;
-}
 
 article,
 aside,
@@ -739,3 +728,4 @@ aside.sidebar h5 {
   padding-left: 20px !important;
   padding-right: 20px !important;
 }
+

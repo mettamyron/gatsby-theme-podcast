@@ -12,6 +12,7 @@ export const ContextProvider = props => {
     twitterID,
     instagramID,
     facebookID,
+    logoUrl,
     defaultEpId,
   } = props;
 
@@ -28,6 +29,7 @@ export const ContextProvider = props => {
         twitterID,
         instagramID,
         facebookID,
+        logoUrl,
         currEpId,
         setCurrEpId,
         isPlaying,
