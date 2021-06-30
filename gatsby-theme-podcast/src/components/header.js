@@ -18,6 +18,7 @@ const Header = (props) => {
     <ContextConsumer>
       {(context) => (
         <Box
+        className="header_image"
           sx={{
             variant: 'header',
             backgroundImage: image
