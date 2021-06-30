@@ -2,6 +2,8 @@
 import Img from 'gatsby-image';
 import React from 'react';
 import { FaPlay, FaPause } from 'react-icons/fa';
+import PlayCircleFilledRoundedIcon from '@material-ui/icons/PlayCircleFilledRounded';
+import PauseCircleFilledRoundedIcon from '@material-ui/icons/PauseCircleFilledRounded';
 import { jsx, useThemeUI, Box, Flex } from 'theme-ui';
 import config from '../lib/config';
 import { ContextConsumer } from '../Context';
@@ -53,7 +55,7 @@ const Header = (props) => {
                     context.setIsPlaying(!context.isPlaying);
                   }}
                 >
-                  {context.isPlaying ? <FaPause /> : <FaPlay />}
+                  {context.isPlaying ? <PauseCircleFilledRoundedIcon /> : <PlayCircleFilledRoundedIcon />}
                 </button>
                 <div>
                   <h1 className="header">{episode.title}</h1>
