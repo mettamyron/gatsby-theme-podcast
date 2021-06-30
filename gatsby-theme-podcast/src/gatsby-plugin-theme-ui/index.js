@@ -54,7 +54,7 @@ export default {
     flexDirection: 'column',
     width: '100%',
     height: config.headerImageHeight,
-    color: 'primary',
+    color: 'text',
     fontFamily: 'heading',
     'h1, h5': { m: 0 },
     h1: { fontSize: [6, 8], mt: [2, 0] },
@@ -74,11 +74,7 @@ export default {
         maxWidth: 7,
         height: 7,
         background: 'transparent',
-<<<<<<< HEAD
         color: 'text',
-=======
-        color: 'primary',
->>>>>>> 095295d057d4e634cdba232542f724f1d0e49e31
         fontSize: '1em',
         display: 'flex',
         alignItems: 'center',
